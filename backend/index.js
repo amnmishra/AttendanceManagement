@@ -16,6 +16,9 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 // Routes
+app.use('/', (req , res) => {
+  res.json("API Running ...");
+});
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/attendance', attendanceRoutes);
